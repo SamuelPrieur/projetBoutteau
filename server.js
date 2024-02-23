@@ -2,7 +2,7 @@ let express = require("express");
 let app = express();
 let port = 3000;
 
-app.use(express.static(__dirname + "/www"));
+app.use(express.static(__dirname + "/www/html"));
 
 app.listen(port, () => {
   console.log("Server initialised");

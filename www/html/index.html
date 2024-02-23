@@ -1,56 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Page 3</title>
-    <style>
-      body {
-        padding-left: 11em;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        color: purple;
-        background-color: #d8da3d;
-      }
-      ul.navbar {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        top: 2em;
-        left: 1em;
-        width: 9em;
-      }
-      h1 {
-        font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-      }
-      ul.navbar li {
-        background: white;
-        margin: 0.5em 0;
-        padding: 0.3em;
-        border-right: 1em solid black;
-      }
-      ul.navbar a {
-        text-decoration: none;
-      }
-      a:link {
-        color: blue;
-      }
-      a:visited {
-        color: purple;
-      }
-      address {
-        margin-top: 1em;
-        padding-top: 1em;
-        border-top: thin dotted;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.21.2/dist/daisyui.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@2.21.2/dist/daisyui.min.js"></script>
   </head>
   <body>
-    <ul class="navbar">
-      <li><a href="../page1.html">Page 1</a></li>
-      <li><a href="../page2.html">Page 2</a></li>
-      <li><a href="page3.html">Page 3</a></li>
-    </ul>
-    <h1>Page 3</h1>
-    <p>Bienvenue sur ma page 3 avec du style!</p>
-    <address>Fait le 5 avril 2004<br />par moi.</address>
+    <div class="bg-base-200">
+      <div class="container mx-auto p-5">
+        <h1 class="text-5xl text-center font-bold mb-5">Welcome to My Page</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-base-100 p-5 rounded-md shadow-md">
+            <h2 class="text-3xl font-bold mb-3">About Me</h2>
+            <p class="text-gray-600">
+              Hello, I'm John Doe, a passionate web developer with over 5 years
+              of experience. I specialize in building responsive and
+              user-friendly websites using the latest technologies.
+            </p>
+          </div>
+          <div class="bg-base-100 p-5 rounded-md shadow-md">
+            <h2 class="text-3xl font-bold mb-3">My Skills</h2>
+            <p class="text-gray-600">
+              I have expertise in a variety of programming languages and
+              frameworks, including HTML, CSS, JavaScript, React, Angular, and
+              Vue.js. I am also experienced in back-end development using
+              Node.js, Express, and MongoDB.
+            </p>
+          </div>
+        </div>
+        <div class="bg-base-100 p-5 rounded-md shadow-md mt-5">
+          <h2 class="text-3xl font-bold mb-3">Contact Me</h2>
+          <form action="/submit_form" method="post">
+            <div class="form-control">
+              <label class="label" for="name">
+                <span class="label-text">Name:</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                class="input input-bordered"
+              />
+            </div>
+            <div class="form-control">
+              <label class="label" for="email">
+                <span class="label-text">Email:</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                class="input input-bordered"
+              />
+            </div>
+            <div class="form-control">
+              <label class="label" for="message">
+                <span class="label-text">Message:</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                class="textarea textarea-bordered"
+              ></textarea>
+            </div>
+            <button class="btn btn-primary mt-3">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
